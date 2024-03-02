@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+{% block title %}About{% endblock %}
+
+{% block head %}
+<div class="container p-2" align="center" style="font-size: 20px">
+<b>A web application to detect the malaria infection in cell images.</b>
+</div>
+{% endblock %}
+
+{% block content %}
+<div class="container p-1">
+	<div class="container p-2">
+		<p style="font-size: 20px; text-align: left;">
+			<h2>What is malaria?</h2><br>
+				Malaria is a life-threatening disease. It’s typically transmitted through the bite of an infected Anopheles mosquito. Infected mosquitoes carry the Plasmodium parasite. When this mosquito bites you, the parasite is released into your bloodstream.<br>
+
+				Once the parasites are inside your body, they travel to the liver, where they mature. After several days, the mature parasites enter the bloodstream and begin to infect red blood cells.<br>
+
+				Within 48 to 72 hours, the parasites inside the red blood cells multiply, causing the infected cells to burst open.<br>
+
+				The parasites continue to infect red blood cells, resulting in symptoms that occur in cycles that last two to three days at a time.<br>
+
+				Malaria is typically found in tropical and subtropical climates where the parasites can live. The World Health Organization (WHO)Trusted Source states that, in 2016, there were an estimated 216 million cases of malaria in 91 countries.<br>
+
+				In the United States, the Centers for Disease Control and Prevention (CDC) report 1,700 casesTrusted Source of malaria annually. Most cases of malaria develop in people who travel to countries where malaria is more common.<br>
+		</p>
+		<div class="container p-2">
+			<b>The Deep Learning Model was trained on 22048 images belonging to 2 classes (Uninfected / Parasitized) and validated on 5510 images.</b><br>
+			<b> Training accuracy : 0.972<br>
+				Validation accuracy : 0.947<br>
+			</b>
+
+			
+		</div>
+	</div>
+	<div class="container p-2">
+		<b>Project Notebook: </b>
+		<a href="https://www.kaggle.com/ashokkumarpalivela/image-classification-end-to-end-project" style="color: blur" target="_blank">click here!</a>
+	</div>
+	<div class="container p-2">
+		<b>Github: </b>
+		<a href="https://github.com/ashok49473/malaria-detection-app" style="color: blue"
+		 target="_blank">click here!</a>
+	</div>
+	<div class="container p-3" align="center">
+		<footer>&copy;2021 Ashok kumar</footer>
+	</div>
+	
+</div>
+{% endblock%}

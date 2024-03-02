@@ -1,0 +1,59 @@
+{% extends "base.html" %}
+
+{% block title %}Home{% endblock %}
+
+{% block head %}
+    <h3 class="text-center heading">Malaria Detection App</h3>
+{% endblock %}
+
+{% block content %}
+    <div class="container mt-5">
+        <form id="upload-file" method="post" enctype="multipart/form-data">
+            <div class="form-group">
+                <label for="imageUpload" class="btn btn-primary btn-lg btn-block">
+                    Choose an Image
+                    <input type="file" name="image" id="imageUpload" accept=".png, .jpg, .jpeg" style="display:none;" onchange="previewImage()">
+                </label>
+            </div>
+
+            <div class="image-section mt-3" style="display:none;">
+                <div class="img-preview text-center">
+                    <div id="imagePreview"></div>
+                </div>
+            </div>
+
+            <button type="submit" class="btn btn-success btn-lg btn-block mt-3">Predict</button>
+        </form>
+    </div>
+
+    {% if prediction %}
+        <div class="container mt-5">
+            <div class="container-content text-center">
+                <div id="imageResult">
+                    <h2>Prediction: {{ prediction }}</h2>
+                    <h3>Confidence: {{ proba }}</h3>
+                </div>
+            </div>
+        </div>
+    {% endif %}
+
+    <script>
+        function previewImage() {
+            var preview = document.getElementById('imagePreview');
+            var fileInput = document.getElementById('imageUpload');
+            var file = fileInput.files[0];
+            var reader = new FileReader();
+
+            reader.onloadend = function () {
+                preview.innerHTML = '<img src="' + reader.result + '" class="img-fluid" alt="Preview">';
+                document.querySelector('.image-section').style.display = 'block';
+            }
+
+            if (file) {
+                reader.readAsDataURL(file);
+            } else {
+                preview.innerHTML = '';
+            }
+        }
+    </script>
+{% endblock %}
