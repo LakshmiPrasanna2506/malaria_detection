@@ -1,0 +1,103 @@
+html {
+    height: 100%;
+}
+body {
+    height: 100%;
+    margin: 0;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+/* Text Align */
+.text-c {
+    text-align: center;
+}
+
+/* Lines */
+
+.line-b {
+    border-bottom: 1px solid #FFEB3B !important;
+}
+
+/* Buttons */
+.button {
+    border-radius: 3px;
+}
+.form-button {
+    background-color: rgba(255, 235, 59, 0.475);
+    border-color: rgba(255, 235, 59, 0.24);
+    color: white;
+}
+.form-button:hover,
+.form-button:focus,
+.form-button:active,
+.form-button.active,
+.form-button:active:focus,
+.form-button:active:hover,
+.form-button.active:hover,
+.form-button.active:focus {
+    background-color: rgba(255, 235, 59, 0.425);
+    border-color: rgba(255, 235, 59, 0.473);
+    color: #e6e6e6;
+}
+.button-l {
+    width: 100% !important;
+}
+
+/* Bootstrap Form Control Extension */
+
+.form-control,
+.border-line {
+    background-color: #a7a0a0;
+    background-image: none;
+    border: 2px solid #424242;
+    border-radius: 1px;
+    color: inherit;
+    display: block;
+    padding: 3px 12px;
+    width: 100%;
+}
+.form-control:focus,
+.border-line:focus {
+    border-color: #FFEB3B;
+    background-color: #b5bcc3;
+    color: #e6e6e6;
+}
+.form-control,
+.form-control:focus {
+    box-shadow: none;
+}
+.form-control::-webkit-input-placeholder { color: #BDBDBD; }
+
+/* Container */
+
+.container-content {
+    color: inherit;
+    padding: 20px;
+    border-color: none;
+    border-image: none;
+    background-color: grey;
+    border-style: solid solid none;
+    border-width: 1px 0;
+}
+
+/* Backgrounds */
+
+.main-bg {
+
+    background: lightgray;
+}
+
+
+.form-container {
+    max-width: 400px;
+    z-index: 100;
+    margin: 0 auto;
+    padding-top: 20px;
+}
+.heading{
+    padding: 5px 10px;
+    text-align: center;
+    border-width: 2px;
+    color: black;
+}
